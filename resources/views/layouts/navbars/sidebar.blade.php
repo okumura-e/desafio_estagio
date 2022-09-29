@@ -2,7 +2,7 @@
     <div class="sidebar-wrapper">
         <div class="logo">
             <a href="#" class="simple-text logo-mini">{{ _('A I') }}</a>
-            <a href="#" class="simple-text logo-normal">{{ _('White Dashboard') }}</a>
+            <a href="#" class="simple-text logo-normal">{{ _('Dashboard') }}</a>
         </div>
         <ul class="nav">
             <li @if ($pageSlug == 'dashboard') class="active " @endif>
@@ -11,6 +11,14 @@
                     <p>{{ _('NEWS') }}</p>
                 </a>
             </li>
+
+            <li @if ($pageSlug == 'icons') class="active " @endif>
+                <a href="{{ route('pages.icons') }}">
+                    <i class="tim-icons icon-atom"></i>
+                    <p>{{ _('ADD NEWS') }}</p>
+                </a>
+            </li>
+            
             <li>
                 <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
                     <i class="fab fa-laravel" ></i>
@@ -35,14 +43,14 @@
                     </ul>
                 </div>
             </li>
-            
-            <!--
-            <li @if ($pageSlug == 'icons') class="active " @endif>
-                <a href="{{ route('pages.icons') }}">
-                    <i class="tim-icons icon-atom"></i>
-                    <p>{{ _('Icons') }}</p>
+            <li @if ($pageSlug == 'typography') class="active " @endif>
+                <a href="{{ route('pages.typography') }}">
+                    <i class="tim-icons icon-align-center"></i>
+                    <p>{{ _('Typography') }}</p>
                 </a>
             </li>
+            
+<!--
             <li @if ($pageSlug == 'maps') class="active " @endif>
                 <a href="{{ route('pages.maps') }}">
                     <i class="tim-icons icon-pin"></i>
@@ -61,12 +69,7 @@
                     <p>{{ _('Table List') }}</p>
                 </a>
             </li>
-            <li @if ($pageSlug == 'typography') class="active " @endif>
-                <a href="{{ route('pages.typography') }}">
-                    <i class="tim-icons icon-align-center"></i>
-                    <p>{{ _('Typography') }}</p>
-                </a>
-            </li>
+
             <li @if ($pageSlug == 'rtl') class="active " @endif>
                 <a href="{{ route('pages.rtl') }}">
                     <i class="tim-icons icon-world"></i>
