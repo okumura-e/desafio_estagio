@@ -2,9 +2,11 @@
 
 @section('content')
 
-<form class="form" method="post" action="{{ route('register') }}">
-  @csrf
 
+
+<form class="form" method="post" action="{{ route('pages.post') }}" enctype="multipart/form-data">
+  @csrf
+  {{ csrf_field() }}
   <div class="col-md-7 mr-auto">
     <div class="card card-register card-white">
         <div class="card-header">

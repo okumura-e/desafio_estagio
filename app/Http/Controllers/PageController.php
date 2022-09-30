@@ -7,7 +7,7 @@ class PageController extends Controller
     /**
      * Display icons page
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\View\Viewre
      */
     public function icons()
     {
