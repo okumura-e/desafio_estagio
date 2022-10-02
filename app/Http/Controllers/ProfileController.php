@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
 
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ProfileRequest;
@@ -13,10 +14,18 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\View\View
      */
+
+
     public function edit()
     {
         return view('profile.edit');
     }
+     /*    public function edit($id)
+    {
+        $user = User::where('id', $id)->first();
+
+        return view('/profile/edit/{id}', compact('user'));
+    }*/
 
     /**
      * Update the profile
@@ -42,5 +51,12 @@ class ProfileController extends Controller
         auth()->user()->update(['password' => Hash::make($request->get('password'))]);
 
         return back()->withPasswordStatus(__('Password successfully updated.'));
+    }
+
+
+    public function delete($id)
+    {
+        User::where('id', $id)->delete();
+        redirect('dashboard');
     }
 }

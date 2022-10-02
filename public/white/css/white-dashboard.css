@@ -4748,8 +4748,8 @@ input[type="button"].btn-block {
 }
 
 .card {
-  position: relative;
-  display: flex;
+  position: static;
+  display: grid;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
@@ -4757,11 +4757,13 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 0.0625rem solid rgba(34, 42, 66, 0.05);
   border-radius: 0.2857rem;
+  
 }
 
 .card>hr {
   margin-right: 0;
   margin-left: 0;
+
 }
 
 .card>.list-group:first-child .list-group-item:first-child {

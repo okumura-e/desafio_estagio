@@ -1,19 +1,38 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Notice;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
     /**
      * Display icons page
      *
-     * @return \Illuminate\View\Viewre
+     * @return \Illuminate\View\View
      */
     public function icons()
     {
         return view('pages.icons');
     }
+    /**
+     * Display typography page
+     *
+     * @return \Illuminate\View\View
+     */
 
+
+    public function typography()
+    {
+        $teste = Notice::where('id', $id)->first(); 
+        dd($teste);
+        
+        $notice = DB::select('select users.id, news.* from users inner join news on users.id 
+        = news.user_id where news.id = ?', [$id]);
+        
+        return view('typography', ['notice'=>$notice] );
+    }
+       
     /**
      * Display maps page
      *
@@ -54,15 +73,6 @@ class PageController extends Controller
         return view('pages.rtl');
     }
 
-    /**
-     * Display typography page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function typography()
-    {
-        return view('pages.typography');
-    }
 
     /**
      * Display upgrade page

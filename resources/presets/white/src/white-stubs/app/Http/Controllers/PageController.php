@@ -59,10 +59,10 @@ class PageController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function typography()
+    /*public function typography()
     {
-        return view('pages.typography');
-    }
+        return view('typography');
+    }*/
 
     /**
      * Display upgrade page

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Routing\Redirector;
 use Illuminate\Http\Request;
 use App\Models\Notice;
 use App\Models\User;

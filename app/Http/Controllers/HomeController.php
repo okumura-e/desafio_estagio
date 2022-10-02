@@ -1,6 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
+use App\Models\Notice;
+use Illuminate\Support\Facades\DB;
+use \Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
+
 
 class HomeController extends Controller
 {
@@ -20,7 +27,17 @@ class HomeController extends Controller
      * @return \Illuminate\View\View
      */
     public function index()
-    {
-        return view('dashboard');
+    {      
+        $search = request('search');
+        $user = auth()->user()->id;
+        if($search){
+            $query = Notice::query();
+            $query->where('title', 'LIKE', '%' . $search . '%');
+            $notices = $query->paginate();
+        }else{
+            $notices = DB::select('select users.id, news.* from users inner join news on users.id = 
+            news.user_id where users.id = ?', [$user]);
+        }
+        return view('dashboard', ['notices' => $notices]);
     }
 }

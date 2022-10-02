@@ -3,31 +3,13 @@
 @section('content')
     <div class="row">
         <div class="col-md-5 ml-auto">
-            <div class="info-area info-horizontal mt-5">
-                <div class="icon icon-warning">
-                    <i class="tim-icons icon-wifi"></i>
+                <div class="card card-register card-white">
+                    <div class="card-header">
+                        <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Card image">
+                        <h4 class="card-title">{{ _('Register') }}</h4>
+                    </div>
                 </div>
-                
             </div>
-            <div class="info-area info-horizontal">
-                <div class="icon icon-primary">
-                    <i class="tim-icons icon-triangle-right-17"></i>
-                </div>
-                
-            </div>
-            <div class="info-area info-horizontal">
-                <div class="icon icon-info">
-                    <i class="tim-icons icon-trophy"></i>
-                </div>
-                
-            </div>
-        </div>
-        <div class="col-md-7 mr-auto">
-            <div class="card card-register card-white">
-                <div class="card-header">
-                    <img class="card-img" src="{{ asset('white') }}/img/card-primary.png" alt="Card image">
-                    <h4 class="card-title">{{ _('Register') }}</h4>
-                </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf
 

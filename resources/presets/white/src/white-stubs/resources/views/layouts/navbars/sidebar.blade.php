@@ -59,11 +59,11 @@
                     <p>{{ _('Table List') }}</p>
                 </a>
             </li>
-            <li @if ($pageSlug == 'typography') class="active " @endif>
-                <a href="{{ route('pages.typography') }}">
+<!--            <li @if ($pageSlug == 'typography') class="active " @endif>
+                <a href="#">
                     <i class="tim-icons icon-align-center"></i>
                     <p>{{ _('Typography') }}</p>
-                </a>
+                </a>-->
             </li>
             <li @if ($pageSlug == 'rtl') class="active " @endif>
                 <a href="{{ route('pages.rtl') }}">

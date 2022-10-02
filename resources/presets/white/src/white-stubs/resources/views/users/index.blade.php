@@ -163,10 +163,10 @@
                                     </a>
                                 </li>
                                 <li >
-                                    <a href="{{ route('pages.typography') }}">
+ <!--                                   <a href="#">
                                         <i class="tim-icons icon-align-center"></i>
                                         <p>{{ _('Typography') }}</p>
-                                    </a>
+                                    </a>-->
                                 </li>
                                 <li >
                                     <a href="{{ route('pages.rtl') }}">

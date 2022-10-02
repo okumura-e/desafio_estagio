@@ -8,46 +8,6 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{('Users List') }}</title>
-        <!-- Favicon -->
-
-       <!-- Extra details for Live View on GitHub Pages -->
-        <!-- Canonical SEO -->
-        <link rel="canonical" href="https://www.creative-tim.com/product/white-dashboard-laravel" />
-
-
-        <!--  Social tags      -->
-        <meta name="keywords" content="design system, dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, white, white dashboard, creative tim, updivision, html dashboard, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap dashboard, responsive dashboard, laravel, laravel php, laravel php framework, free laravel admin template, free laravel admin, free laravel admin template + Front End + CRUD, crud laravel php, crud laravel, laravel backend admin dashboard">
-        <meta name="description" content="Start your development with a Bootstrap 4 Admin Dashboard built for Laravel Framework 5.5 and Up">
-
-
-        <!-- Schema.org markup for Google+ -->
-        <meta itemprop="name" content="White Dashboard Laravel by Creative Tim & UPDIVISION">
-        <meta itemprop="description" content="Start your development with a Bootstrap 4 Admin Dashboard built for Laravel Framework 5.5 and Up">
-
-        <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/215/opt_wd_laravel_thumbnail.jpg">
-
-
-        <!-- Twitter Card data -->
-        <meta name="twitter:card" content="product">
-        <meta name="twitter:site" content="@creativetim">
-        <meta name="twitter:title" content="White Dashboard by Creative Tim & UPDIVISION">
-
-        <meta name="twitter:description" content="Start your development with a Bootstrap 4 Admin Dashboard built for Laravel Framework 5.5 and Up">
-        <meta name="twitter:creator" content="@creativetim">
-        <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/215/opt_wd_laravel_thumbnail.jpg">
-
-
-        <!-- Open Graph data -->
-        <meta property="fb:app_id" content="655968634437471">
-        <meta property="og:title" content="White Dashboard by Creative Tim & UPDIVISION" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.creative-tim.com/live/white-dashboard-laravel" />
-        <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/215/opt_wd_laravel_thumbnail.jpg"/>
-        <meta property="og:description" content="Start your development with a Bootstrap 4 Admin Dashboard built for Laravel Framework 5.5 and Up" />
-        <meta property="og:site_name" content="Creative Tim" />
-
-        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('white') }}/img/apple-icon.png">
-        <link rel="icon" type="image/png" href="{{ asset('white') }}/img/favicon.png">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -57,60 +17,32 @@
         <link href="{{ asset('white') }}/css/white-dashboard.css?v=1.0.0" rel="stylesheet" />
         <link href="{{ asset('white') }}/css/theme.css" rel="stylesheet" />
 
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
-        <!-- End Google Tag Manager -->
-        <script>
-        // Facebook Pixel Code Don't Delete
-            ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-            }(window,
-            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
-            try {
-            fbq('init', '111649226022273');
-            fbq('track', "PageView");
-            } catch (err) {
-            console.log('Facebook Track Error:', err);
-            }
-        </script>
     </head>
 <body class="white-content clickup-chrome-ext_installed">
-                <div class="wrapper">
+    <div class="wrapper">
                     <div class="sidebar">
                         <div class="sidebar-wrapper">
                             <div class="logo">
-                                <a href="#" class="simple-text logo-mini">{{ _('WD') }}</a>
-                                <a href="#" class="simple-text logo-normal">{{ _('White Dashboard') }}</a>
+                                <a href="#" class="simple-text logo-mini">{{ _('A I') }}</a>
+                                <a href="#" class="simple-text logo-normal">{{ _('Dashboard') }}</a>
                             </div>
                             <ul class="nav">
                                 <li>
                                     <a href="{{ route('home') }}">
                                         <i class="tim-icons icon-chart-pie-36"></i>
-                                        <p>{{ _('Dashboard') }}</p>
+                                        <p>{{ _('NEWS') }}</p>
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="{{ route('pages.icons') }}">
+                                        <i class="tim-icons icon-atom"></i>
+                                        <p>{{ _('ADD NEWS') }}</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
                                         <i class="fab fa-laravel" ></i>
-                                        <span class="nav-link-text" >{{ __('Laravel Examples') }}</span>
+                                        <span class="nav-link-text" >{{ __('MANAGEMENT') }}</span>
                                         <b class="caret mt-1"></b>
                                     </a>
                     
@@ -119,58 +51,22 @@
                                             <li >
                                                 <a href="{{ route('profile.edit')  }}">
                                                     <i class="tim-icons icon-single-02"></i>
-                                                    <p>{{ _('User Profile') }}</p>
+                                                    <p>{{ _('My Profile') }}</p>
                                                 </a>
                                             </li>
                                             <li class="active" >
                                                 <a href="{{ route('user.index')  }}">
                                                     <i class="tim-icons icon-bullet-list-67"></i>
-                                                    <p>{{ _('User Management') }}</p>
+                                                    <p>{{ _('Users Management') }}</p>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li >
-                                    <a href="{{ route('pages.icons') }}">
-                                        <i class="tim-icons icon-atom"></i>
-                                        <p>{{ _('Icons') }}</p>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="{{ route('pages.maps') }}">
-                                        <i class="tim-icons icon-pin"></i>
-                                        <p>{{ _('Maps') }}</p>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="{{ route('pages.notifications') }}">
-                                        <i class="tim-icons icon-bell-55"></i>
-                                        <p>{{ _('Notifications') }}</p>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="{{ route('pages.tables') }}">
-                                        <i class="tim-icons icon-puzzle-10"></i>
-                                        <p>{{ _('Table List') }}</p>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="{{ route('pages.typography') }}">
+                                    <a href="#">
                                         <i class="tim-icons icon-align-center"></i>
                                         <p>{{ _('Typography') }}</p>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="{{ route('pages.rtl') }}">
-                                        <i class="tim-icons icon-world"></i>
-                                        <p>{{ _('RTL Support') }}</p>
-                                    </a>
-                                </li>
-                                 <li class="bg-info">
-                                    <a href="{{ route('pages.upgrade') }}">
-                                        <i class="tim-icons icon-spaceship"></i>
-                                        <p>{{ _('Upgrade to PRO') }}</p>
                                     </a>
                                 </li>
                             </ul>
@@ -339,6 +235,9 @@
 
                 
                 
+                
+
+
                 
                 
                 

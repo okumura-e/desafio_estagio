@@ -65,6 +65,15 @@
                         <button type="submit" class="btn btn-fill btn-primary">{{ _('Change password') }}</button>
                     </div>
                 </form>
+               
+               
+                <form method="post" action="{{ route('profile.delete', ['id' => Auth::user()->id]) }}" autocomplete="off">
+                    @csrf
+                    @method('delete')
+                    <div class="card-footer">
+                    <button type="submit" class="btn btn-fill btn-primary">{{ _('Delete Account') }}</button>
+                    </div>
+                </form>
             </div>
         </div>
 

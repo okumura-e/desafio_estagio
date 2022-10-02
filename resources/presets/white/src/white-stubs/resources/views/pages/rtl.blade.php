@@ -77,10 +77,10 @@
             </a>
           </li>
           <li>
-            <a href="{{ route('pages.typography') }}">
+<!--            <a href="{{ route('pages.typography') }}">
               <i class="tim-icons icon-align-center"></i>
               <p>طباعة</p>
-            </a>
+            </a>-->
           </li>
           <li>
             <a href="{{ route('pages.rtl') }}">
