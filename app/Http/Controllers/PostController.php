@@ -21,7 +21,7 @@ class PostController extends Controller
             $requestImg = $request->image;
             $extension = $requestImg->extension();
             $imageName = $requestImg->getClientOriginalName() . "." . $extension;
-            $requestImg->move(public_path('img/events'), $imageName);
+            $requestImg->move(public_path('white/img'), $imageName);
             $request->image = $imageName;
         }
         $post = new Notice();

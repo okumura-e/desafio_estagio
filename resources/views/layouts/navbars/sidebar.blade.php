@@ -44,7 +44,7 @@
                 </div>
             </li>
  <!--           <li @if ($pageSlug == 'typography') class="active " @endif>
-                <a href="{{ route('pages.typography') }}">
+                <a href="#">
                     <i class="tim-icons icon-align-center"></i>
                     <p>{{ _('Typography') }}</p>
                 </a>

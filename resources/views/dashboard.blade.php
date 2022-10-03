@@ -34,7 +34,7 @@
                                           <div class="block block-two"></div>
                                           <div class="block block-three"></div>
                                           <div class="block block-four"></div>
-                                          <!--<a href="/typography/{{ $notice->id }}">-->
+                                          <a href="/typography/{{ $notice->id }}">
                                             <img class="avatar" src="{{ asset('white') }}/img/{{$notice->image}}" alt="">
                                         </a>
                                         <p class="description">{{ $notice->title }}</p>
