@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
 
-    public function icons()
+    public function add_new()
     {
-        return view('pages.icons');
+        return view('pages.add_new');
     }
 
 
-    public function typography($id)
+    public function read_new($id)
     {
         $notice = Notice::where('id', $id)->first();
-        return view('pages.typography', compact('notice'));
+        return view('pages.read_new', compact('notice'));
     }
     
 

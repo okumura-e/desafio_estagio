@@ -9,7 +9,7 @@ use App\Models\User;
 
 class PostController extends Controller
 {
-    public function addnew(Request $request)
+    public function post_new(Request $request)
     {
         $request->validate([
             'image'=>'required|image|mimes:jpeg,png,jpg,gif',

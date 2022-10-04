@@ -152,7 +152,7 @@ class WhitePreset extends Preset
         // Add routes
         file_put_contents(
             './routes/web.php',
-            "Route::group(['middleware' => 'auth'], function () {\n\t\tRoute::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);\n\t\tRoute::get('/typography/{notice}', [App\Http\Controllers\PageController::class, 'typography'])->name('typography.show');\n});\n\n",
+            "Route::group(['middleware' => 'auth'], function () {\n\t\tRoute::get('addnew', [App\Http\Controllers\PageController::class, 'add_new'])->name('add.new');\n\t\tRoute::get('/typography/{notice}', [App\Http\Controllers\PageController::class, 'typography'])->name('typography.show');\n});\n\n",
             FILE_APPEND
         );
 

@@ -33,7 +33,7 @@ class ProfileController extends Controller
 
     public function delete($id)
     {
+        return view('welcome');
         User::where('id', $id)->delete();
-        redirect('dashboard');
     }
 }

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <form class="form" method="POST" action="{{ route('update.user', ['id' => $user->id]) }}" enctype="multipart/form-data">
+        <form class="form" method="POST" action="{{ route('update.client', ['id' => $user->id]) }}" enctype="multipart/form-data">
             @csrf
             {{ csrf_field() }}
             @method('PUT')

@@ -25,14 +25,14 @@ class UserController extends Controller
         return view('users.index', ['users' => $users]);
     }
 
-    public function add_user()
+    public function add_client()
     {
         return view('users.adduser');
     }
 
 
 
-    public function add_client(Request $request)
+    public function post_client(Request $request)
     {
         $request->validate([
             'name'=>'required',
@@ -55,15 +55,14 @@ class UserController extends Controller
         return view('users.clientprofile', compact('user'));
     }
 
-    public function edit_user($id)
+    public function edit_client($id)
     {
         $user = Client::where('id', $id)->first();
         return view('users.edituser', compact('user'));
     }
 
 
-
-    public function update_user(Request $request, $id)
+    public function update_client(Request $request, $id)
     {
         $request->validate([
             'name'=>'required',

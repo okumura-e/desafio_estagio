@@ -11,7 +11,7 @@ class PageController extends Controller
      */
     public function icons()
     {
-        return view('pages.icons');
+        return view('add.new');
     }
 
     /**

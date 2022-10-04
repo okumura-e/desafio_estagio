@@ -25,6 +25,7 @@ class HomeController extends Controller
     {      
         $search = request('search');
         $user = auth()->user()->id;
+        $complemento = "and users.id = ";
         if($search){
             $query = Notice::query();
             $query->where('title', 'LIKE', '%' . $search . '%');

@@ -47,7 +47,7 @@
             </a>
           </li>
           <li>
-            <a href="{{ route('pages.icons') }}">
+            <a href="{{ route('add.new') }}">
               <i class="tim-icons icon-atom"></i>
               <p>الرموز</p>
             </a>

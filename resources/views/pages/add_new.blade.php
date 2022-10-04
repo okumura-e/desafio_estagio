@@ -1,10 +1,10 @@
-@extends('layouts.app', ['page' => __('Icons'), 'pageSlug' => 'icons'])
+@extends('layouts.app', ['page' => __('addnew'), 'pageSlug' => 'addnew'])
 
 @section('content')
 
 
 
-<form class="form" method="post" action="{{ route('pages.post') }}" enctype="multipart/form-data">
+<form class="form" method="post" action="{{ route('post.new') }}" enctype="multipart/form-data">
   @csrf
   {{ csrf_field() }}
   <div class="col-md-7 mr-auto">

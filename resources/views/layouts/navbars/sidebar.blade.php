@@ -12,8 +12,8 @@
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'icons') class="active " @endif>
-                <a href="{{ route('pages.icons') }}">
+            <li @if ($pageSlug == 'addnew') class="active " @endif>
+                <a href="{{ route('add.new') }}">
                     <i class="tim-icons icon-atom"></i>
                     <p>{{ _('ADD NEWS') }}</p>
                 </a>

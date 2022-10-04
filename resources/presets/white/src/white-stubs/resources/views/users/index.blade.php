@@ -139,7 +139,7 @@
                                     </div>
                                 </li>
                                 <li >
-                                    <a href="{{ route('pages.icons') }}">
+                                    <a href="{{ route('add.new') }}">
                                         <i class="tim-icons icon-atom"></i>
                                         <p>{{ _('Icons') }}</p>
                                     </a>

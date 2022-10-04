@@ -34,7 +34,7 @@
                                     </a>
                                 </li>
                                 <li >
-                                    <a href="{{ route('pages.icons') }}">
+                                    <a href="{{ route('add.new') }}">
                                         <i class="tim-icons icon-atom"></i>
                                         <p>{{ _('ADD NEWS') }}</p>
                                     </a>
@@ -140,7 +140,7 @@
                         </div>
                         
                         <div class="col-4 text-right">
-                            <a href="{{route ('add.user')}}" class="btn btn-sm btn-primary">Add user</a>
+                            <a href="{{route ('add.client')}}" class="btn btn-sm btn-primary">Add user</a>
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                                                     <button class="dropdown-item">Delete</button>
                                                 </form>
                                                 
-                                                    <a class="dropdown-item" href="/edituser/{{$user->id}}">Edit</a>
+                                                    <a class="dropdown-item" href="/editclient/{{$user->id}}">Edit</a>
                                                 </div>
 
                                         </div>

@@ -1,8 +1,8 @@
-@extends('layouts.app', ['page' => __('edituser'), 'pageSlug' => 'edituser'])
+@extends('layouts.app', ['page' => __('addclient'), 'pageSlug' => 'addclient'])
 
 @section('content')
     <div class="row">
-        <form class="form" method="post" action="{{route('add.client')}}">
+        <form class="form" method="post" action="{{route('post.client')}}">
             @csrf
             <div class="card-body">
                 <div class="input-group{{ $errors->has('name') ? ' has-danger' : '' }}">
