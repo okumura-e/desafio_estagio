@@ -53,47 +53,19 @@
             </a>
           </li>
           <li>
-            <a href="{{ route('pages.maps') }}">
-              <i class="tim-icons icon-pin"></i>
-              <p>خرائط</p>
-            </a>
-          </li>
-          <li>
-            <a href="{{ route('pages.notifications') }}">
-              <i class="tim-icons icon-bell-55"></i>
-              <p>إخطارات</p>
-            </a>
-          </li>
+
           <li>
             <a href="{{ route('profile.edit') }}">
               <i class="tim-icons icon-single-02"></i>
               <p>ملف تعريفي للمستخدم</p>
             </a>
           </li>
-          <li>
-            <a href="{{ route('pages.tables') }}">
-              <i class="tim-icons icon-puzzle-10"></i>
-              <p>قائمة الجدول</p>
-            </a>
-          </li>
-          <li>
-<!--            <a href="#">
+          <!--            <a href="#">
+  <li>
               <i class="tim-icons icon-align-center"></i>
               <p>طباعة</p>
+            </li>
             </a>-->
-          </li>
-          <li>
-            <a href="{{ route('pages.rtl') }}">
-              <i class="tim-icons icon-world"></i>
-              <p>دعم RTL</p>
-            </a>
-          </li>
-          <li>
-            <a href="{{ route('pages.upgrade') }}">
-              <i class="tim-icons icon-spaceship"></i>
-              <p>التطور للاحترافية</p>
-            </a>
-          </li>
         </ul>
       </div>
     </div>

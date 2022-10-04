@@ -130,7 +130,7 @@
                                                 </a>
                                             </li>
                                             <li class="active" >
-                                                <a href="{{ route('user.index')  }}">
+                                                <a href="{{ route('user.management')  }}">
                                                     <i class="tim-icons icon-bullet-list-67"></i>
                                                     <p>{{ _('User Management') }}</p>
                                                 </a>
@@ -145,40 +145,10 @@
                                     </a>
                                 </li>
                                 <li >
-                                    <a href="{{ route('pages.maps') }}">
-                                        <i class="tim-icons icon-pin"></i>
-                                        <p>{{ _('Maps') }}</p>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="{{ route('pages.notifications') }}">
-                                        <i class="tim-icons icon-bell-55"></i>
-                                        <p>{{ _('Notifications') }}</p>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="{{ route('pages.tables') }}">
-                                        <i class="tim-icons icon-puzzle-10"></i>
-                                        <p>{{ _('Table List') }}</p>
-                                    </a>
-                                </li>
-                                <li >
  <!--                                   <a href="#">
                                         <i class="tim-icons icon-align-center"></i>
                                         <p>{{ _('Typography') }}</p>
                                     </a>-->
-                                </li>
-                                <li >
-                                    <a href="{{ route('pages.rtl') }}">
-                                        <i class="tim-icons icon-world"></i>
-                                        <p>{{ _('RTL Support') }}</p>
-                                    </a>
-                                </li>
-                                 <li class="bg-info">
-                                    <a href="{{ route('pages.upgrade') }}">
-                                        <i class="tim-icons icon-spaceship"></i>
-                                        <p>{{ _('Upgrade to PRO') }}</p>
-                                    </a>
                                 </li>
                             </ul>
                         </div>

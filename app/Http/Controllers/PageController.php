@@ -7,20 +7,11 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    /**
-     * Display icons page
-     *
-     * @return \Illuminate\View\View
-     */
+
     public function icons()
     {
         return view('pages.icons');
     }
-    /**
-     * Display typography page
-     *
-     * @return \Illuminate\View\View
-     */
 
 
     public function typography($id)
@@ -28,12 +19,14 @@ class PageController extends Controller
         $notice = Notice::where('id', $id)->first();
         return view('pages.typography', compact('notice'));
     }
+    
 
     public function newedit($id)
     {
         $notice = Notice::where('id', $id)->first();
         return view('pages.editnew', compact('notice'));
     }
+
 
     public function newupdate(Request $request, $id)
     {
@@ -61,60 +54,11 @@ class PageController extends Controller
         return redirect()->route('home');
     }
 
+
     public function newdelete($id)
     {
         Notice::where('id', $id)->delete();
         return redirect()->route('home');
     }
-       
-    /**
-     * Display maps page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function maps()
-    {
-        return view('pages.maps');
-    }
 
-    /**
-     * Display tables page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function tables()
-    {
-        return view('pages.tables');
-    }
-
-    /**
-     * Display notifications page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function notifications()
-    {
-        return view('pages.notifications');
-    }
-
-    /**
-     * Display rtl page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function rtl()
-    {
-        return view('pages.rtl');
-    }
-
-
-    /**
-     * Display upgrade page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function upgrade()
-    {
-        return view('pages.upgrade');
-    }
 }

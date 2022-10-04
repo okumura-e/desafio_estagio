@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form class="form" method="post" action="{{ route('new.update', ['id' => $notice->id]) }}" enctype="multipart/form-data">
+<form class="form" method="put" action="{{ route('new.update', ['id' => $notice->id]) }}" enctype="multipart/form-data">
   @csrf
   {{ csrf_field() }}
   @method('PUT')

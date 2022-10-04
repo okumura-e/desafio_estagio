@@ -55,7 +55,7 @@
                                                 </a>
                                             </li>
                                             <li class="active" >
-                                                <a href="{{ route('user.index')  }}">
+                                                <a href="{{ route('user.management')  }}">
                                                     <i class="tim-icons icon-bullet-list-67"></i>
                                                     <p>{{ _('Users Management') }}</p>
                                                 </a>
@@ -64,10 +64,6 @@
                                     </div>
                                 </li>
                                 <li >
-                                    <a href="#">
-                                        <i class="tim-icons icon-align-center"></i>
-                                        <p>{{ _('Typography') }}</p>
-                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -93,35 +89,6 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navigation">
                             <ul class="navbar-nav ml-auto">
-                                <li class="search-bar input-group">
-                                    <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
-                                        <span class="d-lg-none d-md-block">{{ __('Search') }}</span>
-                                    </button>
-                                </li>
-                                <li class="dropdown nav-item">
-                                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                        <div class="notification d-none d-lg-block d-xl-block"></div>
-                                        <i class="tim-icons icon-sound-wave"></i>
-                                        <p class="d-lg-none"> {{ __('Notifications') }} </p>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">{{ __('Mike John responded to your email') }}</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">{{ __('You have 5 more tasks') }}</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">{{ __('Your friend Michael is in town') }}</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">{{ __('Another notification') }}</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">{{ __('Another one') }}</a>
-                                        </li>
-                                    </ul>
-                                </li>
                                 <li class="dropdown nav-item">
                                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                         <div class="photo">
@@ -133,9 +100,6 @@
                                     <ul class="dropdown-menu dropdown-navbar">
                                         <li class="nav-link">
                                             <a href="{{ route('profile.edit') }}" class="nav-item dropdown-item">{{ __('Profile') }}</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">{{ __('Settings') }}</a>
                                         </li>
                                         <li class="dropdown-divider"></li>
                                         <li class="nav-link">
@@ -160,78 +124,87 @@
                         </div>
                     </div>
                 </div>
-                
-<div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <i class="tim-icons icon-simple-remove"></i>
-          </button>
-        </div>
-    </div>
-</div>
-</div>
 
 
-                <div class="content">
-                        <div class="row">
-    <div class="col-md-12">
-        <div class="card ">
-            <div class="card-header">
-                <div class="row">
-                    <div class="col-8">
-                        <h4 class="card-title">Users</h4>
-                    </div>
-                    <div class="col-4 text-right">
-                        <a href="#" class="btn btn-sm btn-primary">Add user</a>
+
+
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-8">
+                            <h4 class="card-title">Users</h4>
+                        </div>
+                        
+                        <div class="col-4 text-right">
+                            <a href="{{route ('add.user')}}" class="btn btn-sm btn-primary">Add user</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-body">
-                
-                <div class="">
-                    <table class="table tablesorter " id="">
-                        <thead class=" text-primary">
-                            <tr><th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Creation Date</th>
-                            <th scope="col"></th>
-                        </tr></thead>
+                <div class="card-body">
+                    <div class="">
+
+                        <div class="card">
+                            <div class="card-header">  
+                            <form action="" method="get">
+                                <div class="form-group">
+                                    <input type="text" name="search" class="form-control" placeholder="{{ __('Search User ') }}" value="">
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                        
+                        <table class="table tablesorter " id="">
+                            <thead class=" text-primary">
+                                <tr><th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Contact</th>
+                                <th scope="col"></th>
+                            </tr></thead>
                         
                         <tbody>
                             @foreach($users as $user)
                                 <tr>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
-                                    <td>{{$user->created_at}}</td>
+                                    <td>{{$user->number}}</td>
                                     <td class="text-right">
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
+                                   
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <a class="dropdown-item" href="#">View</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                            </div>
+                                                <a class="dropdown-item" href="/client/{{$user->id}}">View</a>
+                                                
+                                                <form method="post" action="{{route('delete.client', ['id' => $user->id])}}" autocomplete="off">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button class="dropdown-item">Delete</button>
+                                                </form>
+                                                
+                                                    <a class="dropdown-item" href="/edituser/{{$user->id}}">Edit</a>
+                                                </div>
+
                                         </div>
                                     </td>
                                 </tr>
                             @endforeach
                         </tbody>
                     
-                    </table>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <div class="card-footer py-4">
-                <nav class="d-flex justify-content-end" aria-label="..."></nav>
+                <div class="card-footer py-4">
+                    <nav class="d-flex justify-content-end" aria-label="..."></nav>
+                </div>
             </div>
         </div>
     </div>
 </div>
-                </div>
 
                 
                 
@@ -249,38 +222,7 @@
                 
                 
                 
-                
-                <footer class="footer">
-<div class="container-fluid">
-    <ul class="nav">
-        <li class="nav-item">
-            <a href="https://creative-tim.com" target="blank" class="nav-link">
-                Creative Tim
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="https://updivision.com" target="blank" class="nav-link">
-                Updivision
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                About Us
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                Blog
-            </a>
-        </li>
-    </ul>
-    <div class="copyright">
-        © 2020 made with <i class="tim-icons icon-heart-2"></i> by
-        <a href="https://creative-tim.com" target="_blank">Creative Tim</a> &amp;
-        <a href="https://updivision.com" target="_blank">Updivision</a> for a better web.
-    </div>
-</div>
-</footer>
+               
             </div>
         </div>
     <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">

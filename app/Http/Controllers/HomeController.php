@@ -21,11 +21,6 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\View\View
-     */
     public function index()
     {      
         $search = request('search');
